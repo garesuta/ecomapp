@@ -2,8 +2,10 @@ import React from "react";
 import logo from "../Assets/ecommerce.png";
 import cart_icon from "../Assets/shopping-cart.png";
 import { Link } from "react-router-dom";
+import { useShoppingCart } from "../../Context/ShoppingCartContext";
 
-const NavBar = ({ numItemCart }) => {
+const NavBar = () => {
+  const { cartQuantity, openCart } = useShoppingCart();
   return (
     <div className="flex justify-around p-[16px] shadow">
       <div className="flex justify-center gap-[10px]">
@@ -35,8 +37,8 @@ const NavBar = ({ numItemCart }) => {
         <Link to={"/cart"}>
           <img src={cart_icon} alt="" className="max-h-[40px]" />
         </Link>
-        <div className="w-[22px] h-[22px] flex justify-center align-middle rounded-[11px] text-[14px] bg-red-700 text-white mt-[-5px] ml-[-55px]">
-          {numItemCart}
+        <div className="w-[22px] h-[22px] flex justify-center align-middle rounded-[11px] text-[14px] bg-red-700 text-white mt-[-2px] ml-[-55px]">
+          {cartQuantity}
         </div>
       </div>
     </div>

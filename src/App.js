@@ -1,7 +1,8 @@
 import './App.css';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-import CartItem from './Pages/CartItem';
+import ShoppingCartPage from './Pages/ShoppingCart';
 import HomePage from './Pages/HomePage';
+import { ShoppingCartProvider } from './Context/ShoppingCartContext';
 
 
 function App() {
@@ -12,12 +13,16 @@ function App() {
     },
     {
       path: "/cart",
-      element: <CartItem />,
+      element: <ShoppingCartPage />,
     },
   ]);
-  return (<div className="">
+  return <ShoppingCartProvider>
+    <>
+    <div className="">
     <RouterProvider router={router} />
-  </div>)
+  </div>
+    </>
+  </ShoppingCartProvider>
 }
 
 export default App;
