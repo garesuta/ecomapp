@@ -1,6 +1,6 @@
 import React from "react";
-import { useShoppingCart } from "../Context/ShoppingCartContext";
-import CartCard from "../Components/CartCard";
+import { useShoppingCart } from "../Context/ShoppingCartContext.jsx";
+import CartCard from "../Components/CartCard.jsx";
 
 const ShoppingCartPage = () => {
   const { cartItem } = useShoppingCart();

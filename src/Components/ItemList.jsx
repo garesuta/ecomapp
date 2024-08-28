@@ -1,11 +1,7 @@
 import React from "react";
-import ProductCard from "./Product";
-import { useShoppingCart } from "../Context/ShoppingCartContext";
+import ProductCard from "./Product.jsx";
 
 const ItemList = ({ item }) => {
-  const { cartItem } = useShoppingCart();
-  console.log(cartItem);
-
   const renderedItems = item.map((item) => {
     return <ProductCard key={item.id} {...item} />;
   });

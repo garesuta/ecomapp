@@ -1,8 +1,8 @@
 import './App.css';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-import ShoppingCartPage from './Pages/ShoppingCart';
-import HomePage from './Pages/HomePage';
-import { ShoppingCartProvider } from './Context/ShoppingCartContext';
+import ShoppingCartPage from './Pages/ShoppingCart.jsx';
+import HomePage from './Pages/HomePage.jsx';
+import { ShoppingCartProvider } from './Context/ShoppingCartContext.jsx';
 
 
 function App() {

@@ -1,5 +1,4 @@
 import { createContext, useCallback, useContext, useState } from "react";
-import ShoppingCartPage from "../Pages/ShoppingCart";
 
 const ShoppingCartContext = createContext({});
 
