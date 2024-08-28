@@ -1,8 +1,8 @@
 import React from "react";
+import axios from "axios";
 import { useState, useEffect } from "react";
 import NavBar from "../Components/Navbar/NavBar.jsx";
 import ItemList from "../Components/ItemList";
-import axios from "axios";
 
 const HomePage = () => {
   const [items, setItems] = useState([]);
