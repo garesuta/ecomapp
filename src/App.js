@@ -16,13 +16,13 @@ function App() {
       element: <ShoppingCartPage />,
     },
   ]);
-  return <ShoppingCartProvider>
+  return (<ShoppingCartProvider>
     <>
     <div className="">
     <RouterProvider router={router} />
   </div>
     </>
-  </ShoppingCartProvider>
+  </ShoppingCartProvider>)
 }
 
 export default App;
