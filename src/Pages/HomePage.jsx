@@ -13,7 +13,10 @@ const HomePage = () => {
     );
     setItems(response.data);
   };
-  useEffect(() => fetchItems, []);
+  useEffect(() => {
+    fetchItems;
+    console.log(111);
+  }, []);
 
   return (
     <div>
